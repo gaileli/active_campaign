@@ -25,7 +25,7 @@ module ActiveCampaign
     end
 
     def message
-      if response.nil?
+      if response.nil? || response.is_a?(Exception)
         super
       else
         <<~MESSAGE
