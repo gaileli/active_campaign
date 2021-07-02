@@ -122,6 +122,14 @@ module ActiveCampaign
       def update_contact(id, params)
         put("contacts/#{id}", contact: params)
       end
+      
+      def contact_deals(id)
+        get("contacts/#{id}/deals")
+      end
+      
+      def contact_scores(id)
+        get("contacts/#{id}/scoreValues")
+      end
     end
   end
 end
