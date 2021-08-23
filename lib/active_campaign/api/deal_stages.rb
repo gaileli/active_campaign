@@ -58,7 +58,7 @@ module ActiveCampaign
       def show_deal_stages(search = nil, **params)
         params[:search] = search
 
-        get('dealStages', search: search)
+        get('dealStages', params)
       end
 
       # rubocop:disable Layout/LineLength
